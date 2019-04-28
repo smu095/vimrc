@@ -47,37 +47,37 @@ runtime macros/matchit.vim
 " TODO
 
 " Indentation
-set autoindent	 		        " Minimal autoindentation for any filetype.
-set expandtab		        	" Convert tab to spaces.
+set autoindent                  " Minimal autoindentation for any filetype.
+set expandtab                   " Convert tab to spaces.
 set shiftwidth=4                " Determines whitespace for indentation in
                                 " Normal mode.
 set softtabstop=4               " <Backspace> removes 4 spaces of indentation.
 set tabstop=4                   " <Tab> inserts 4 spaces.
 
 " Various settings
-set backspace=indent,eol,start	" Proper backspace behaviour.
+set backspace=indent,eol,start  " Proper backspace behaviour.
 set confirm                     " Show confirmation dialogue when closing
                                 " unsaved file.
-set cursorline		        	" Highlight screen line of cursor.
+set cursorline                  " Highlight screen line of cursor.
 set encoding=utf-8              " Enable UTF-8 encoding.
 set fileformat=unix             " Use UNIX (\n) line endings.
-set hidden 		            	" Possibility to have more than one
+set hidden                      " Possibility to have more than one
                                 " unsaved buffer.
-set incsearch		        	" Incremental search (i.e. search as typed), 
-			                	" hit <CR> to stop.
-set number		            	" Enable line numbers.
-set ruler		            	" Show current line number at bottom right
-				                " of the screen.
-set relativenumber 		        " Show line number relative to current line.
-				                " below current window.
+set incsearch                   " Incremental search (i.e. search as typed), 
+                                " hit <CR> to stop.
+set number                      " Enable line numbers.
+set ruler                       " Show current line number at bottom right
+                                " of the screen.
+set relativenumber              " Show line number relative to current line.
+                                " below current window.
 set splitbelow                  " New horisontal split places new window
-                                " below current.s
-set splitright			        " New vertical split places new window
-				                " to the right of current.
-set textwidth=79                " Number of characters per line.
-set title			            " Window title shows current file.
-set wildmenu			        " Command-line completion, use <Tab> to move
-				                " around and <CR> to validate.
+                                " below current.
+set splitright                  " New vertical split places new window
+                                " to the right of current.
+set textwidth=79                " Number of characters per line (PEP-8).
+set title                       " Window title shows current file.
+set wildmenu                    " Command-line completion, use <Tab> to move
+                                " around and <CR> to validate.
 
 
 " KEY MAPPINGS ----------------------------------------------------------------
