@@ -44,7 +44,8 @@ let python_highlight_all=1
 runtime macros/matchit.vim
 
 " Whitespace warnings 
-" TODO
+highlight BadWhitespace ctermbg=red guibg=red
+match BadWhitespace /\s\+$/
 
 " Indentation
 set autoindent                  " Minimal autoindentation for any filetype.
