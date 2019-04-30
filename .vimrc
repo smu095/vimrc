@@ -11,7 +11,6 @@ filetype off
 " Setup
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
@@ -84,13 +83,29 @@ set wildmenu                    " Command-line completion, use <Tab> to move
 " KEY MAPPINGS ----------------------------------------------------------------
 
 " Easy window navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-L> <C-W><C-L>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-h> <C-w><C-h>
+noremap <C-l> <C-w><C-l>
+
+" Indenting in Normal and Visual  mode
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
+" Yank until end of line
+nnoremap Y y$
+
+" Save and run script
+nnoremap <F5> <Esc>:w<CR>:!clear;python %<CR>
+inoremap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
 " Code folding with space bar
-nnoremap <space> za
+nnoremap <space> za  
+
+" Open NERDTree 
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " VISUALS ---------------------------------------------------------------------
 
