@@ -25,6 +25,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'cjrh/vim-conda'
+Plugin 'tpope/vim-commentary'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'wsdjeg/FlyGrep'
 
 " Required
 call vundle#end()
@@ -58,18 +61,18 @@ set tabstop=4                   " <Tab> inserts 4 spaces.
 set backspace=indent,eol,start  " Proper backspace behaviour.
 set confirm                     " Show confirmation dialogue when closing
                                 " unsaved file.
+set colorcolumn=+1              " Highlight textwidth column.
 set cursorline                  " Highlight screen line of cursor.
 set encoding=utf-8              " Enable UTF-8 encoding.
 set fileformat=unix             " Use UNIX (\n) line endings.
 set hidden                      " Possibility to have more than one
                                 " unsaved buffer.
 set incsearch                   " Incremental search (i.e. search as typed), 
-                                " hit <CR> to stop.
-set number                      " Enable line numbers.
+                                " hit <CR> to stop.                             
+set number                      " Turn on numbering.
+set relativenumber              " Turn on relative numbering.
 set ruler                       " Show current line number at bottom right
                                 " of the screen.
-set relativenumber              " Show line number relative to current line.
-                                " below current window.
 set splitbelow                  " New horisontal split places new window
                                 " below current.
 set splitright                  " New vertical split places new window
@@ -81,6 +84,10 @@ set wildmenu                    " Command-line completion, use <Tab> to move
 
 
 " KEY MAPPINGS ----------------------------------------------------------------
+
+" Map space to leader
+let mapleader=' '
+nnoremap <Space> <Nop>
 
 " Easy window navigation
 nnoremap <C-j> <C-w><C-j>
@@ -102,7 +109,13 @@ nnoremap <F5> <Esc>:w<CR>:!clear;python %<CR>
 inoremap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
 " Code folding with space bar
-nnoremap <space> za  
+nnoremap <leader>c za  
+
+" Quicksave
+nnoremap <leader>w :w<CR>
+
+" Quick quit
+nnoremap <leader>q :q<CR>
 
 " Open NERDTree 
 nnoremap <C-n> :NERDTreeToggle<CR>
