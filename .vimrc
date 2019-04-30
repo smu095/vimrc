@@ -1,5 +1,5 @@
 " @smu095's .vimrc configuration for Python development.
-" Last changed: 25.04.19.
+" Last changed: 30.04.19.
 
 " Required
 set nocompatible
@@ -86,7 +86,7 @@ set wildmenu                    " Command-line completion, use <Tab> to move
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-h> <C-w><C-h>
-noremap <C-l> <C-w><C-l>
+nnoremap <C-l> <C-w><C-l>
 
 " Indenting in Normal and Visual  mode
 nnoremap <Tab> >>
